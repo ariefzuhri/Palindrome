@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_first"
+    android:fillViewport="true"
+    tools:context=".ui.first.FirstActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:layout_marginBottom="64dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_profile_placeholder_348" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/edt_hint_name_first"
+            android:inputType="textPersonName|textCapWords" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_palindrome"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:hint="@string/edt_hint_palindrome_first"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_check"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/btn_check_first"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_next_first"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+</ScrollView>

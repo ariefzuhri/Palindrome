@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Suitmedia Intern Test</string>
+
+    <string name="title_third">Third Screen</string>
+    <string name="title_second">Second Screen</string>
+
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+
+    <string name="btn_check_first">Check</string>
+    <string name="btn_next_first">Next</string>
+    <string name="edt_hint_name_first">Name</string>
+    <string name="edt_hint_palindrome_first">Palindrome</string>
+    <string name="edt_error_name_first">Name is required</string>
+    <string name="edt_error_palindrome_first">Please enter a word</string>
+
+    <string name="tv_welcome_second">Welcome</string>
+    <string name="tv_selected_user_name_second">Selected User Name</string>
+    <string name="btn_choose_user_second">Choose a User</string>
+</resources>
