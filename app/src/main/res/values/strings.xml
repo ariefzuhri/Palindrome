@@ -13,6 +13,8 @@
     <string name="edt_hint_palindrome_first">Palindrome</string>
     <string name="edt_error_name_first">Name is required</string>
     <string name="edt_error_palindrome_first">Please enter a word</string>
+    <string name="dialog_message_result_palindrome_first">isPalindrome</string>
+    <string name="dialog_message_result_not_palindrome_first">not palindrome</string>
 
     <string name="tv_welcome_second">Welcome</string>
     <string name="tv_selected_user_name_second">Selected User Name</string>

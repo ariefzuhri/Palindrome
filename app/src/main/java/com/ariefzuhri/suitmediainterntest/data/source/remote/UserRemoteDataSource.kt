@@ -43,6 +43,6 @@ class UserRemoteDataSource private constructor(
     }
 
     override fun getRefreshKey(state: PagingState<Int, UsersResponse.DataItem>): Int? {
-        return state.anchorPosition
+        return null
     }
 }

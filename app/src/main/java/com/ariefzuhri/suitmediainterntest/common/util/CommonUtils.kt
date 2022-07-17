@@ -13,8 +13,6 @@ fun EditText?.getInput(): String {
 fun ImageView?.loadAvatar(source: Any?) {
     this?.load(source) {
         crossfade(true)
-        placeholder(R.drawable.ic_profile_placeholder_348)
-        error(R.drawable.ic_profile_placeholder_348)
         transformations(CircleCropTransformation())
     }
 }

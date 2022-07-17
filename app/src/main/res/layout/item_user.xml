@@ -11,7 +11,8 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/ic_profile_placeholder_348"
+        android:background="@drawable/ic_profile_placeholder_348"
+        android:backgroundTint="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />

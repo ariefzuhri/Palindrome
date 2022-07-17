@@ -41,11 +41,12 @@ class FirstActivity : BaseActivity() {
             } else {
                 error = null
                 showPalindromeCheckingResult(
-                    message = if (text.isPalindrome()) "isPalindrome" else "not palindrome"
+                    message =
+                    if (text.isPalindrome()) getString(R.string.dialog_message_result_palindrome_first)
+                    else getString(R.string.dialog_message_result_not_palindrome_first)
                 )
             }
         }
-
     }
 
     private fun showPalindromeCheckingResult(message: String) {
