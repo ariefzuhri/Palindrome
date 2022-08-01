@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Suitmedia Intern Test</string>
 
     <string name="title_third">Third Screen</string>
@@ -19,4 +20,5 @@
     <string name="tv_welcome_second">Welcome</string>
     <string name="tv_selected_user_name_second">Selected User Name</string>
     <string name="btn_choose_user_second">Choose a User</string>
+
 </resources>

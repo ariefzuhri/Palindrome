@@ -3,12 +3,12 @@ package com.ariefzuhri.suitmediainterntest.data.repository
 import androidx.paging.*
 import com.ariefzuhri.suitmediainterntest.data.model.User
 import com.ariefzuhri.suitmediainterntest.data.model.toUser
-import com.ariefzuhri.suitmediainterntest.data.source.remote.UserRemoteDataSource
+import com.ariefzuhri.suitmediainterntest.data.source.remote.UserPagingSource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class UserRepository private constructor(
-    private val userRemoteDataSource: UserRemoteDataSource,
+    private val userPagingSource: UserPagingSource,
 ) {
 
     companion object {
@@ -16,10 +16,10 @@ class UserRepository private constructor(
         private var instance: UserRepository? = null
 
         fun getInstance(
-            userRemoteDataSource: UserRemoteDataSource,
+            userPagingSource: UserPagingSource,
         ): UserRepository {
             return instance ?: synchronized(this) {
-                instance ?: UserRepository(userRemoteDataSource)
+                instance ?: UserRepository(userPagingSource)
             }
         }
     }
@@ -28,7 +28,7 @@ class UserRepository private constructor(
         return Pager(
             config = PagingConfig(pageSize = 10),
             pagingSourceFactory = {
-                userRemoteDataSource
+                userPagingSource
             }
         ).flow.map { pagingData ->
             pagingData.map {

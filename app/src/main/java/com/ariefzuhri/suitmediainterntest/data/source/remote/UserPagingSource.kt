@@ -7,26 +7,25 @@ import com.ariefzuhri.suitmediainterntest.data.source.remote.response.UsersRespo
 import retrofit2.HttpException
 import java.io.IOException
 
-class UserRemoteDataSource private constructor(
-    private val apiService: ApiService,
-) : PagingSource<Int, UsersResponse.DataItem>() {
+class UserPagingSource private constructor(private val apiService: ApiService) :
+    PagingSource<Int, UsersResponse.DataItem>() {
 
     companion object {
-        private const val STARTING_PAGE_NUMBER = 1
+        private const val START_PAGE_NUMBER = 1
 
         @Volatile
-        private var instance: UserRemoteDataSource? = null
+        private var instance: UserPagingSource? = null
 
-        fun getInstance(apiService: ApiService): UserRemoteDataSource {
+        fun getInstance(apiService: ApiService): UserPagingSource {
             return instance ?: synchronized(this) {
-                instance ?: UserRemoteDataSource(apiService)
+                instance ?: UserPagingSource(apiService)
             }
         }
     }
 
     @Suppress("UNCHECKED_CAST")
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, UsersResponse.DataItem> {
-        val nextPageNumber = params.key ?: STARTING_PAGE_NUMBER
+        val nextPageNumber = params.key ?: START_PAGE_NUMBER
         return try {
             val response = apiService.getUsers(page = nextPageNumber, size = params.loadSize)
             LoadResult.Page(
@@ -36,9 +35,9 @@ class UserRemoteDataSource private constructor(
                 else null
             )
         } catch (e: IOException) {
-            return LoadResult.Error(e)
+            LoadResult.Error(e)
         } catch (e: HttpException) {
-            return LoadResult.Error(e)
+            LoadResult.Error(e)
         }
     }
 

@@ -69,14 +69,6 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
 
-    // Data storage
-    implementation "androidx.room:room-runtime:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
-
-    // Database encryption
-    implementation "net.zetetic:android-database-sqlcipher:$sqlCipherVersion"
-    implementation "androidx.sqlite:sqlite-ktx:$sqliteVersion"
-
     // Paging
     implementation "androidx.paging:paging-runtime:$pagingVersion"
 
@@ -92,7 +84,7 @@ dependencies {
     implementation(platform("com.squareup.okhttp3:okhttp-bom:$okHttpVersion"))
     implementation "com.squareup.okhttp3:logging-interceptor"
 
-    // Service locator
+    // Dependency injection
     implementation "io.insert-koin:koin-core:$koinVersion"
     implementation "io.insert-koin:koin-android:$koinVersion"
     implementation "io.insert-koin:koin-androidx-compose:$koinVersion"

@@ -12,7 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/ic_profile_placeholder_348"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
-        android:textColor="@color/gray"
+        android:textColor="@color/grey"
         app:layout_constraintStart_toStartOf="@+id/tv_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_name"
         tools:text="email@email.com" />

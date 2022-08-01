@@ -4,13 +4,8 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.ariefzuhri.suitmediainterntest.common.action.close
-import com.ariefzuhri.suitmediainterntest.common.action.show
-import com.ariefzuhri.suitmediainterntest.common.view.dialog.LoadingDialog
 
 open class BaseActivity : AppCompatActivity() {
-
-    private val loadingDialog by lazy { LoadingDialog.newInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +19,6 @@ open class BaseActivity : AppCompatActivity() {
 
     fun Toolbar?.init() {
         setSupportActionBar(this)
-    }
-
-    fun startLoading() {
-        loadingDialog.show(supportFragmentManager)
-    }
-
-    fun stopLoading() {
-        loadingDialog.close()
     }
 
     override fun onSupportNavigateUp(): Boolean {

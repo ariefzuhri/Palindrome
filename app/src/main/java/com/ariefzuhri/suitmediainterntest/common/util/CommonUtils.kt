@@ -4,7 +4,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.ariefzuhri.suitmediainterntest.R
 
 fun EditText?.getInput(): String {
     return this?.text?.trim().toString()
@@ -26,10 +25,6 @@ fun String?.isPalindrome(): Boolean {
     val reverse = text.reversed()
     return text == reverse
 }
-
-/*fun String?.removeWhitespaces(): String {
-    return this?.filterNot { char -> char.isWhitespace() }.orEmpty()
-}*/
 
 fun String?.removePunctuations(): String {
     return this?.filter { char -> char.isLetterOrDigit() }.orEmpty()

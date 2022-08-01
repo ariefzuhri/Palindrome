@@ -20,9 +20,3 @@ fun UsersResponse.DataItem?.toUser(): User {
         avatar = this?.avatar.orEmpty()
     )
 }
-
-fun UsersResponse.toUsers(): List<User> {
-    return this.data?.map { response ->
-        response.toUser()
-    } ?: listOf()
-}
